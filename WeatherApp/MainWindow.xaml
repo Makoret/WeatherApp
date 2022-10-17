@@ -1,0 +1,63 @@
+﻿<Window x:Class="WeatherApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeatherApp"
+        mc:Ignorable="d"
+        Title="WeatherApp"
+        Height="350"
+        Width="300"
+        FontFamily="/WeatherApp;component/style/#Child's Hand"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid>
+        <Button
+            Foreground="Black"
+            Background="White"
+            Height="20"
+            Width="20"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Content="X"
+            BorderThickness="0"
+            Padding="1,1,0,0"
+            Click="Close"/>
+        <TextBox 
+            Name="tb_CityName"
+            Text="Name a city" FontSize="40"
+            Height="50" Margin="0,25,0,25" 
+            Foreground="Black"
+            HorizontalAlignment="Stretch" VerticalAlignment="top"
+            TextAlignment="Center"
+            BorderThickness="0" GotFocus="NewCity" KeyDown="Tb_CityName_KeyDown" LostFocus="Tb_CityName_LostFocus"
+            />
+        <TextBox
+            Name="tb_TempC"
+            Text="0°" FontSize="100"
+            Height="150" Margin="0,100,0,0"
+            IsReadOnly="True"
+            HorizontalAlignment="Stretch" VerticalAlignment="top"
+            TextAlignment="Center"
+            BorderThickness="0" 
+            />
+        <TextBox 
+            Name="tb_Condition"
+            Text="No city" FontSize="45"
+            Width="150" Height="100" VerticalContentAlignment="Center" Margin="0,0,0,0"
+            HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            TextAlignment="Center"
+            IsReadOnly="True"
+            TextWrapping="Wrap"
+            BorderThickness="0" FontFamily="/WeatherApp;component/style/#Brushways"/>
+        <TextBox
+            Name="tb_LocalTime"
+            Text="00:00" FontSize="50"
+            Width="150" Height="100" VerticalContentAlignment="Center"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom"
+            TextAlignment="Center"
+            IsReadOnly="True"
+            BorderThickness="0" FontFamily="/WeatherApp;component/style/#Brushways"/>
+
+    </Grid>
+</Window>
