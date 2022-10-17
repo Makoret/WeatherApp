@@ -10,9 +10,11 @@
         Width="300"
         FontFamily="/WeatherApp;component/style/#Child's Hand"
         WindowStyle="None"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        MouseLeftButtonDown="Btn_Move_MouseDown">
     <Grid>
         <Button
+            Name="btn_Close"
             Foreground="Black"
             Background="White"
             Height="20"
